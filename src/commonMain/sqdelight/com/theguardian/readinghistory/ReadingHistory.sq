@@ -1,0 +1,12 @@
+CREATE TABLE articleView (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  article_id TEXT NOT NULL,
+  date INTEGER NOT NULL
+);
+
+selectAll:
+SELECT * FROM articleView
+ORDER BY date DESC;
+
+insertArticleView:
+INSERT INTO articleView (article_id, date) VALUES (?, ?);
