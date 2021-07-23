@@ -1,6 +1,7 @@
 plugins {
     kotlin("multiplatform") version "1.4.32"
     id("com.android.library")
+    id("com.chromaticnoise.multiplatform-swiftpackage") version "2.0.3"
 }
 
 group = "com.theguardian.kotlin"
@@ -52,4 +53,13 @@ android {
         minSdkVersion(24)
         targetSdkVersion(30)
     }
+}
+
+multiplatformSwiftPackage {
+    packageName("ReadingHistory")
+    swiftToolsVersion("5.3")
+    targetPlatforms {
+        iOS { v("13") }
+    }
+    outputDirectory(File(buildDir, "swiftPackage"))
 }
