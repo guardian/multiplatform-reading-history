@@ -19,7 +19,7 @@ kotlin {
     iosX64("ios") {
         binaries {
             framework {
-                baseName = "multiplatform-reading-history"
+                baseName = "ReadingHistory-xcode-11-workaround"
             }
         }
     }
